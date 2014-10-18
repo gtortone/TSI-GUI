@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<topology entrynum="1" teluid="2" detuid="4">
+    <telescope id="1" name="t1"/>
+    <detector parentid="1" id="1" name="pp1" type="2" port="3" line="15" coincop="0" coincfreqdiv="0" coincperiod="2" coincdelay="0" enabled="1"/>
+    <detector parentid="1" id="2" name="m1" type="3" port="3" line="3" coincop="0" coincfreqdiv="0" coincperiod="2" coincdelay="0" enabled="1"/>
+    <detector parentid="1" id="3" name="p1" type="1" port="3" line="0" coincop="0" coincfreqdiv="0" coincperiod="2" coincdelay="0" enabled="1"/>
+    <vme baseaddr="0xF0920000" host="matrix.na.infn.it" port="5555"/>
+</topology>

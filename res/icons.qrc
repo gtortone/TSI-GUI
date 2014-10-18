@@ -1,0 +1,33 @@
+<RCC>
+    <qresource prefix="/icon">
+        <file>icons/fire.png</file>
+        <file>icons/reset.png</file>
+        <file>icons/collision.jpg</file>
+        <file>icons/close.png</file>
+        <file>icons/info.png</file>
+        <file>icons/exotic-logo.png</file>
+        <file>icons/stop.png</file>
+        <file>icons/print.png</file>
+        <file>icons/arrow-down.png</file>
+        <file>icons/arrow-right.png</file>
+        <file>icons/stretch.png</file>
+        <file>icons/or-gate.png</file>
+        <file>icons/freqdiv.png</file>
+        <file>icons/allocated-small.png</file>
+        <file>icons/and-gate.png</file>
+        <file>icons/warning-small.png</file>
+        <file>icons/allocated-large.png</file>
+        <file>icons/warning-large.png</file>
+        <file>icons/cancel-large.png</file>
+        <file>icons/ok-large.png</file>
+        <file>icons/edit-large.png</file>
+        <file>icons/edit.png</file>
+        <file>icons/remove.png</file>
+        <file>icons/add.png</file>
+    </qresource>
+    <qresource prefix="/images">
+        <file>help/tsi-diagram-1.jpg</file>
+        <file>help/tsi-diagram-2.jpg</file>
+        <file>help/tsi-diagram-3.jpg</file>
+    </qresource>
+</RCC>

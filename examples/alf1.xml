@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<topology entrynum="3" teluid="4" detuid="9">
+    <telescope id="1" name="t1"/>
+    <telescope id="2" name="t2"/>
+    <telescope id="3" name="mon"/>
+    <detector parentid="1" id="1" name="d1" type="0" port="0" line="0" coincop="1" coincfreqdiv="0" coincperiod="4" coincdelay="0" enabled="1"/>
+    <detector parentid="1" id="2" name="d2" type="0" port="1" line="0" coincop="1" coincfreqdiv="0" coincperiod="2" coincdelay="1" enabled="1"/>
+    <detector parentid="1" id="4" name="c1" type="4" port="3" line="5" coincop="0" coincfreqdiv="0" coincperiod="4" coincdelay="0" enabled="1"/>
+    <detector parentid="2" id="5" name="d1" type="0" port="0" line="1" coincop="1" coincfreqdiv="0" coincperiod="2" coincdelay="0" enabled="1"/>
+    <detector parentid="2" id="6" name="d2" type="0" port="0" line="2" coincop="1" coincfreqdiv="0" coincperiod="3" coincdelay="0" enabled="1"/>
+    <detector parentid="3" id="8" name="m1" type="3" port="3" line="0" coincop="0" coincfreqdiv="0" coincperiod="1" coincdelay="0" enabled="1"/>
+    <monline port="0" mline="1" seqid="16"/>
+    <monline port="3" mline="0" seqid="5"/>
+    <monline port="1" mline="1" seqid="35"/>
+    <tl1conf output="0" gate="27" lines="17,5,16"/>
+    <tl1conf output="1" gate="19" lines="16,17"/>
+    <tl2conf output="0" gate="10" lines="0,0"/>
+</topology>

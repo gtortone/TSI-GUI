@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<topology entrynum="8" teluid="9" detuid="21">
+    <telescope id="1" name="telA"/>
+    <telescope id="2" name="telB"/>
+    <telescope id="3" name="telC"/>
+    <telescope id="4" name="telD"/>
+    <telescope id="5" name="telE"/>
+    <telescope id="6" name="telF"/>
+    <telescope id="7" name="monitor"/>
+    <telescope id="8" name="monitor-linea"/>
+    <detector parentid="1" id="4" name="dE" type="0" port="1" line="0" coincop="1" coincfreqdiv="0" coincperiod="15" coincdelay="0" enabled="1"/>
+    <detector parentid="1" id="5" name="E" type="0" port="0" line="0" coincop="1" coincfreqdiv="0" coincperiod="15" coincdelay="0" enabled="1"/>
+    <detector parentid="2" id="6" name="dE" type="0" port="1" line="1" coincop="1" coincfreqdiv="0" coincperiod="15" coincdelay="0" enabled="1"/>
+    <detector parentid="2" id="7" name="E" type="0" port="0" line="1" coincop="1" coincfreqdiv="0" coincperiod="15" coincdelay="0" enabled="1"/>
+    <detector parentid="3" id="8" name="dE" type="0" port="1" line="2" coincop="1" coincfreqdiv="0" coincperiod="15" coincdelay="0" enabled="1"/>
+    <detector parentid="3" id="9" name="E" type="0" port="0" line="2" coincop="1" coincfreqdiv="0" coincperiod="15" coincdelay="0" enabled="1"/>
+    <detector parentid="4" id="10" name="dE" type="0" port="1" line="3" coincop="1" coincfreqdiv="0" coincperiod="15" coincdelay="0" enabled="1"/>
+    <detector parentid="4" id="11" name="E" type="0" port="0" line="3" coincop="1" coincfreqdiv="0" coincperiod="15" coincdelay="0" enabled="1"/>
+    <detector parentid="5" id="12" name="dE" type="0" port="1" line="8" coincop="1" coincfreqdiv="0" coincperiod="15" coincdelay="0" enabled="1"/>
+    <detector parentid="5" id="13" name="E" type="0" port="0" line="8" coincop="1" coincfreqdiv="0" coincperiod="15" coincdelay="0" enabled="1"/>
+    <detector parentid="6" id="14" name="dE" type="0" port="1" line="9" coincop="1" coincfreqdiv="0" coincperiod="15" coincdelay="0" enabled="1"/>
+    <detector parentid="6" id="15" name="E" type="0" port="0" line="9" coincop="1" coincfreqdiv="0" coincperiod="15" coincdelay="0" enabled="1"/>
+    <detector parentid="7" id="16" name="m1" type="3" port="3" line="0" coincop="0" coincfreqdiv="0" coincperiod="15" coincdelay="0" enabled="1"/>
+    <detector parentid="7" id="18" name="m2" type="1" port="3" line="1" coincop="0" coincfreqdiv="0" coincperiod="15" coincdelay="0" enabled="1"/>
+    <detector parentid="8" id="19" name="ml1" type="3" port="3" line="2" coincop="0" coincfreqdiv="0" coincperiod="15" coincdelay="0" enabled="1"/>
+    <detector parentid="8" id="20" name="ml2" type="1" port="3" line="3" coincop="0" coincfreqdiv="0" coincperiod="15" coincdelay="0" enabled="1"/>
+    <tl1conf output="0" gate="18" lines="16,17"/>
+    <tl1conf output="1" gate="28" lines="0,1,2,3"/>
+    <tl2conf output="0" gate="8" lines="0,1"/>
+    <vme baseaddr="0xF0920000" host="matrix.na.infn.it" port="5555"/>
+</topology>

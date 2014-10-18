@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainDialog</class>
+ <widget class="QMainWindow" name="MainDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>650</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1024</width>
+    <height>650</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1024</width>
+    <height>650</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>EXOTIC Trigger Supervisor GUI</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1024</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionNewWorkspace"/>
+    <addaction name="actionOpenWorkspace"/>
+    <addaction name="separator"/>
+    <addaction name="actionSaveWorkspace"/>
+    <addaction name="actionSaveWorkspaceAs"/>
+    <addaction name="separator"/>
+    <addaction name="actionCloseWorkspace"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuTopology">
+    <property name="title">
+     <string>Topology</string>
+    </property>
+    <addaction name="actionNewTopology"/>
+    <addaction name="separator"/>
+    <addaction name="actionEditTopology"/>
+   </widget>
+   <widget class="QMenu" name="menuDetector">
+    <property name="title">
+     <string>Detectors</string>
+    </property>
+    <widget class="QMenu" name="menuMonAssign">
+     <property name="title">
+      <string>Assign monitor lines</string>
+     </property>
+     <addaction name="actionMonDet"/>
+     <addaction name="actionMonPort"/>
+    </widget>
+    <addaction name="actionDetWireSetup"/>
+    <addaction name="menuMonAssign"/>
+    <addaction name="separator"/>
+    <addaction name="actionConfigSummary"/>
+   </widget>
+   <widget class="QMenu" name="menuTrigger">
+    <property name="title">
+     <string>Trigger</string>
+    </property>
+    <addaction name="actionTL1config"/>
+    <addaction name="actionTL2config"/>
+    <addaction name="actionTL3config"/>
+   </widget>
+   <widget class="QMenu" name="menuVME">
+    <property name="title">
+     <string>VME</string>
+    </property>
+    <addaction name="actionSetBaddr"/>
+    <addaction name="actionSetVMEConn"/>
+    <addaction name="separator"/>
+    <addaction name="actionTSIcp"/>
+    <addaction name="separator"/>
+    <addaction name="actionGenConfig"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionTSIdiagram"/>
+    <addaction name="separator"/>
+    <addaction name="actionAboutGui"/>
+    <addaction name="actionAboutQt"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuTopology"/>
+   <addaction name="menuDetector"/>
+   <addaction name="menuTrigger"/>
+   <addaction name="menuVME"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionNewWorkspace">
+   <property name="text">
+    <string>New Workspace</string>
+   </property>
+  </action>
+  <action name="actionOpenWorkspace">
+   <property name="text">
+    <string>Open Workspace</string>
+   </property>
+  </action>
+  <action name="actionNewTopology">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>New Topology</string>
+   </property>
+  </action>
+  <action name="actionCloseWorkspace">
+   <property name="text">
+    <string>Close Workspace</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionSaveWorkspace">
+   <property name="text">
+    <string>Save Workspace</string>
+   </property>
+  </action>
+  <action name="actionEditTopology">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Edit Topology</string>
+   </property>
+  </action>
+  <action name="actionResetTopology">
+   <property name="text">
+    <string>Reset Topology</string>
+   </property>
+  </action>
+  <action name="actionDetWireSetup">
+   <property name="text">
+    <string>Wiring and setup</string>
+   </property>
+  </action>
+  <action name="actionEditTriggerSetup">
+   <property name="text">
+    <string>Edit Trigger setup</string>
+   </property>
+  </action>
+  <action name="actionResetTriggerSetup">
+   <property name="text">
+    <string>Reset Trigger setup</string>
+   </property>
+  </action>
+  <action name="actionTsiSetup">
+   <property name="text">
+    <string>Setup</string>
+   </property>
+  </action>
+  <action name="actionConfigSummary">
+   <property name="text">
+    <string>Configuration summary</string>
+   </property>
+  </action>
+  <action name="actionMonDet">
+   <property name="text">
+    <string>by detectors</string>
+   </property>
+  </action>
+  <action name="actionMonPort">
+   <property name="text">
+    <string>by TSI port</string>
+   </property>
+  </action>
+  <action name="actionSaveWorkspaceAs">
+   <property name="text">
+    <string>Save Workspace as...</string>
+   </property>
+  </action>
+  <action name="actionTL1config">
+   <property name="text">
+    <string>Level I trigger config</string>
+   </property>
+  </action>
+  <action name="actionTL2config">
+   <property name="text">
+    <string>Level II trigger config</string>
+   </property>
+  </action>
+  <action name="actionTL3config">
+   <property name="text">
+    <string>Level III trigger config</string>
+   </property>
+  </action>
+  <action name="actionGenConfig">
+   <property name="text">
+    <string>View VME setup</string>
+   </property>
+  </action>
+  <action name="actionSetBaddr">
+   <property name="text">
+    <string>Set TSI base address</string>
+   </property>
+  </action>
+  <action name="actionSetVMEConn">
+   <property name="text">
+    <string>Setup vme2net connection</string>
+   </property>
+  </action>
+  <action name="actionTSIcp">
+   <property name="text">
+    <string>Trigger Supervisor control panel</string>
+   </property>
+  </action>
+  <action name="actionTSIdiagram">
+   <property name="text">
+    <string>Trigger Supervisor diagram</string>
+   </property>
+  </action>
+  <action name="actionAboutGui">
+   <property name="text">
+    <string>About Trigger Supervisor GUI</string>
+   </property>
+  </action>
+  <action name="actionAboutQt">
+   <property name="text">
+    <string>About Qt library</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>

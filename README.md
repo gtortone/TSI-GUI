@@ -8,6 +8,9 @@ Prerequisites
 
 libraries:
 
-Qt      (>= 4.6.3)  
-ZeroMQ  (= 4.0.3)
-QWT     (>= 6.1.1)
+Qt (>= 4.6.3)  
+
+ZeroMQ (= 4.0.3)
+
+QWT (>= 6.1.1)
+

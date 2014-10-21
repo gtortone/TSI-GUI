@@ -1,5 +1,4 @@
 #include "cpform.h"
-#include "circularbuffer.h"
 #include <QMainWindow>
 #include <QStatusBar>
 #include <QEvent>

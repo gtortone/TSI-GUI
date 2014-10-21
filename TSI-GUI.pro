@@ -4,7 +4,7 @@
 TEMPLATE = app
 TARGET = TSI-GUI
 QMAKE_CLEAN = bin/TSI-GUI
-DESTDIR = bin 
+DESTDIR = bin
 OBJECTS_DIR = objs
 MOC_DIR = moc
 UI_DIR = include
@@ -38,7 +38,6 @@ HEADERS += include/zmq.hpp \
     include/dssdmon.h \
     include/detwireset.h \
     include/cpform.h \
-    include/circularbuffer.h \
     include/CAENVMEtypes.h
 FORMS += ui/wdg-tsicp.ui \
     ui/wdg-topology.ui \
@@ -73,6 +72,5 @@ SOURCES += src/v2n-client.cpp \
     src/editdetdialog.cpp \
     src/dssdmon.cpp \
     src/detwireset.cpp \
-    src/cpform.cpp \
-    src/circularbuffer.cpp
+    src/cpform.cpp
 RESOURCES += res/icons.qrc

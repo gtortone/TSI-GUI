@@ -217,12 +217,34 @@ void QRegisterSet::set(TSIport p, TSIcoinc c, enum CoincFreqDiv div) {
 
 void QRegisterSet::set(TSIport p, TSIcoinc c, enum CoincPeriod w) {
 
-   coincwidth[p][c/2].set(c, w);
+   int index = 0;
+
+   if( (c == 0) || (c == 1) )
+      index = 0;
+   else if( (c == 2) || (c == 3) )
+      index = 1;
+   else if( (c == 4) || (c == 5) )
+      index = 2;
+   else if( (c == 6) || (c == 7) )
+      index = 3;
+
+   coincwidth[p][index].set(c, w);
 }
 
 void QRegisterSet::set(TSIport p, TSIcoinc c, enum CoincDelay d) {
 
-   coincdelay[p][c/2].set(c, d);
+   int index = 0;
+
+   if( (c == 0) || (c == 1) )
+      index = 0;
+   else if( (c == 2) || (c == 3) )
+      index = 1;
+   else if( (c == 4) || (c == 5) )
+      index = 2;
+   else if( (c == 6) || (c == 7) )
+      index = 3;
+
+   coincdelay[p][index].set(c, d);
 }
 
 void QRegisterSet::set(TSIport p, TSIcoinc c, enum DelayEnable e) {
@@ -237,12 +259,50 @@ void QRegisterSet::set(TSIline l, enum DelayEnable e) {
 
 void QRegisterSet::set(TSIline l, enum CoincPeriod w) {
 
-   linewidth[l/2].set(l, w);
+   int index = 0;
+
+   if( (l == 0) || (l == 1) )
+      index = 0;
+   else if( (l == 2) || (l == 3) )
+      index = 1;
+   else if( (l == 4) || (l == 5) )
+      index = 2;
+   else if( (l == 6) || (l == 7) )
+      index = 3;
+   else if( (l == 8) || (l == 9) )
+      index = 4;
+   else if( (l == 10) || (l == 11) )
+      index = 5;
+   else if( (l == 12) || (l == 13) )
+      index = 6;
+   else if( (l == 14) || (l == 15) )
+      index = 7;
+
+   linewidth[index].set(l, w);
 }
 
 void QRegisterSet::set(TSIline l, enum CoincDelay d) {
 
-   linedelay[l/2].set(l, d);
+   int index = 0;
+
+   if( (l == 0) || (l == 1) )
+      index = 0;
+   else if( (l == 2) || (l == 3) )
+      index = 1;
+   else if( (l == 4) || (l == 5) )
+      index = 2;
+   else if( (l == 6) || (l == 7) )
+      index = 3;
+   else if( (l == 8) || (l == 9) )
+      index = 4;
+   else if( (l == 10) || (l == 11) )
+      index = 5;
+   else if( (l == 12) || (l == 13) )
+      index = 6;
+   else if( (l == 14) || (l == 15) )
+      index = 7;
+
+   linedelay[index].set(l, d);
 }
 
 void QRegisterSet::set(TSIport p, uint8_t id, uint8_t index) {  // for multiplexer registers
@@ -299,7 +359,14 @@ uint32_t QRegisterSet::read_coincfreq(TSIport p, TSIcoinc c) {
 
 uint8_t QRegisterSet::read_coincfreqof(TSIport p, TSIcoinc c) {
 
-   return(coincfreqof[p][c/4].get(c));
+   int index = 0;
+
+   if( (c == 0) || (c == 1) || (c == 2) || (c == 3) )
+      index = 0;
+   else if( (c == 4) || (c == 5) || (c == 6) || (c == 7) )
+      index = 1;
+
+   return(coincfreqof[p][index].get(c));
 }
 
 uint8_t QRegisterSet::parse_coincfreqdiv(TSIcoinc c, uint16_t data) {
@@ -720,7 +787,6 @@ QString QRegisterSet::output(QString pfx, TSIport p, uint8_t id) {
    hex.sprintf("%04X",getregvalue(pfx, p, id));
 
    str = getregname(pfx, p, id) + " = 0x" + hex;
-   //qDebug() << str;
 
    return str;
 }

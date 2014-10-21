@@ -33,9 +33,9 @@ enum TSIstatus QRegTSIStatus::get(void) {
 void QRegTSIInput::set(TSIline l, enum LineEnable e) {
 
    if(!e)
-      value &= ~( (int)(std::pow(2, mask_width[l]) - 1) << mask_pos[l] );
+      value -= mask[l];
    else
-      value |= (e << mask_pos[l]);
+      value += mask[l];
 }
 
 // ################################### VME REGISTER AbilitazioneSimTrg{Xa,Xb,Xc,X4} ###################################
@@ -45,9 +45,9 @@ void QRegTSIInput::set(TSIline l, enum LineEnable e) {
 void QRegSimInput::set(TSIline l, enum LineEnable e) {
 
    if(!e)
-      value &= ~( (int)(std::pow(2, mask_width[l]) - 1) << mask_pos[l] );
+      value -= mask[l];
    else
-      value |= (e << mask_pos[l]);
+      value += mask[l];
 }
 
 // ################################### VME REGISTER GenSimTrigger{Xa,Xb,Xc,X4} ###################################
@@ -66,9 +66,9 @@ void QRegSimGen::set(void) {
 void QRegCoincLogic::set(TSIcoinc c, enum CoincOp op) {
 
    if(!op)
-      value &= ~( (int)(std::pow(2, mask_width[c]) - 1) << mask_pos[c] );
+      value -= mask[c];
    else
-      value |= (op << mask_pos[c]);
+      value += mask[c];
 }
 
 // ################################### VME REGISTER ContatoreFreCoinc{Xa0...7, Xb0...7, Xc0...7} ###################################

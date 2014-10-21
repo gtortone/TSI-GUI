@@ -1381,7 +1381,7 @@ QStringList QTopology::dumpVMEConfig(bool zerosupp) {
 
             if(det.type() == DSSD) {
 
-               TSIcoinc coinc = (line <= TRG3)?(TSIcoinc)line:(TSIcoinc)(line / 2);
+               TSIcoinc coinc = det.coinc();
 
                tsiregset.set(port, (TSIline)(line), ENABLED);
                tsiregset.set(port, (TSIline)(line+4), ENABLED);
